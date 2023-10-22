@@ -69,6 +69,7 @@ class VideoDataset(Dataset):
         else:
             self.all_flows = None
 
+        print('root_dir=', self.root_dir)
         if self.split == 'train' or self.split == 'val':
             if self.canonical_dir is not None:
                 all_images_path_ = sorted(glob.glob(f'{self.canonical_dir}/*.png'))
